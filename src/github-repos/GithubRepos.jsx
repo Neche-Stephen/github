@@ -22,6 +22,7 @@ const GithubRepositories = () => {
   return (
     <div >
       <h2>My GitHub Repositories</h2>
+      <Link to = '/test-error'>Page to test the error boundary</Link> <br/>
       <input
         type="text"
         placeholder="Search Repositories"
