@@ -8,7 +8,10 @@ const GithubRepositories = () => {
   useEffect(() => {
     fetch('https://api.github.com/users/Neche-Stephen/repos')
       .then(response => response.json())
-      .then(data => setRepos(data))
+      .then(data => {
+        console.log(data)
+        setRepos(data)
+      })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
@@ -17,7 +20,7 @@ const GithubRepositories = () => {
   );
 
   return (
-    <div>
+    <div >
       <h2>My GitHub Repositories</h2>
       <input
         type="text"

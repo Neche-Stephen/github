@@ -10,7 +10,7 @@ import ErrorTestPage from './ErrorTestPage/ErrorTestPage';
 const App = () => {
   return (
     <Router>
-      <div>
+      <div style={{padding:"10px"}}>
         <h1>My GitHub Portfolio</h1>
         <ErrorBoundary>
           <Routes>

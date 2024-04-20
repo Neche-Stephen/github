@@ -12,7 +12,7 @@ const SingleRepo = () => {
     fetch(`https://api.github.com/repos/Neche-Stephen/${name}`)
       .then(response => response.json())
       .then(data => {
-        console.log('here', repo)
+        console.log('here', data)
         setRepo(data);
         setLoading(false);
       })
@@ -31,7 +31,7 @@ const SingleRepo = () => {
     <div>
       <h2>Repository Details</h2>
       <p>Name: {repo.name}</p>
-      <p>Description: {repo.description}</p>
+      <p>Description: {repo.description === null ? "No Description for this repo" : repo.description}</p>
       {/* Display other repository details as needed */}
     </div>
   );
